@@ -1,0 +1,27 @@
+{
+    "name": "loaders-modernized-wood",
+    "version": "1.0.0",
+    "title": "Loaders Modernized: Wooden Logistics",
+    "description": "Add Modern Loaders to Wooden Logistics",
+    "author": "kryojenik",
+    "contact": "https://github.com/kryojenik/loaders-modernized-wood",
+    "homepage": "https://github.com/kryojenik/loaders-modernized-wood",
+    "source": "https://github.com/kryojenik/loaders-modernized-wood",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base >= 2.0.55",
+        "flib >= 0.16.2",
+        "loaders-modernized >= 0.8.15",
+        "wood-logistics"
+    ],
+    "package": {
+        "git_publish_branch": "main",
+        "ignore": [
+            "TODO.md",
+            "types.lua",
+            "screenshots/*"
+        ],
+        "sync_portal_details": false,
+        "no_git_push": true
+    }
+}
