@@ -1,1 +1,1 @@
-require("prototypes.addon")
+require("prototypes.boblogistics")

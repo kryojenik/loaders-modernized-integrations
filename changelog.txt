@@ -2,4 +2,4 @@
 Version: 1.0.0
 Date: ????
   Changes:
-    - Move Extendand Vanila support to standalone mod
+    - Move Bob's Logistics support to standalone mod
