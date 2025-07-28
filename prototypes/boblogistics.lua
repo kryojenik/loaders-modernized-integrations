@@ -1,6 +1,40 @@
 ---@type table<string, LMLoaderTemplate>
 local startup_settings = settings.startup
 
+local inserters = {
+  [false] = {
+    ["basic"] = "burner-inserter",
+    [""] = "inserter",
+    ["fast"] ="fast-inserter",
+    ["express"] = "bulk-inserter",
+    ["turbo"] = "bob-express-inserter",
+    ["ultimate"] = "bob-express-bulk-inserter"
+  },
+  [true] = {
+    ["basic"] = "burner-inserter",
+    [""] = "inserter",
+    ["fast"] ="long-handed-inserter",
+    ["express"] = "fast-inserter",
+    ["turbo"] = "bob-turbo-inserter",
+    ["ultimate"] = "bob-express-inserter"
+  }
+}
+
+local stack_inserters = {
+  [false] = {
+    ["fast"] ="fast-inserter",
+    ["express"] = "bulk-inserter",
+    ["turbo"] = "bob-express-inserter",
+    ["ultimate"] = "bob-express-bulk-inserter"
+  },
+  [true] = {
+    ["fast"] ="bob-red-bulk-inserter",
+    ["express"] = "bulk-inserter",
+    ["turbo"] = "bob-turbo-bulk-inserter",
+    ["ultimate"] = "bob-express-bulk-inserter"
+  }
+}
+local bob_inserter_overhaul = startup_settings["bobmods-logistics-inserteroverhaul"].value
 local loaders = {}
 
 loaders[""] = {
@@ -10,7 +44,7 @@ loaders[""] = {
   recipe_data = {
     ingredients = {
       {type = "item", name = "underground-belt", amount = 1},
-      {type = "item", name = "inserter", amount = 6},
+      {type = "item", name = inserters[bob_inserter_overhaul][""], amount = 6},
     },
   }
 }
@@ -23,12 +57,12 @@ loaders["fast-"] = {
     surface_conditions = data.raw["recipe"]["fast-underground-belt"].surface_conditions,
     ingredients = {
       {type = "item", name = "fast-underground-belt", amount = 1},
-      {type = "item", name = "long-handed-inserter", amount = 6},
+      {type = "item", name = inserters[bob_inserter_overhaul]["fast"], amount = 6},
       {type = "item", name = "mdrn-loader", amount = 1}
     },
     stack_ingredients = {
       {type = "item", name = "fast-underground-belt", amount = 1},
-      {type = "item", name = "bob-red-bulk-inserter", amount = 6},
+      {type = "item", name = stack_inserters[bob_inserter_overhaul]["fast"], amount = 6},
       {type = "item", name = "mdrn-loader", amount = 1}
     }
   }
@@ -43,12 +77,12 @@ loaders["express-"] = {
     surface_conditions = data.raw["recipe"]["express-underground-belt"].surface_conditions,
     ingredients = {
       {type = "item", name = "express-underground-belt", amount = 1},
-      {type = "item", name = "fast-inserter", amount = 6},
+      {type = "item", name = inserters[bob_inserter_overhaul]["express"], amount = 6},
       {type = "item", name = "fast-mdrn-loader", amount = 1}
     },
     stack_ingredients = {
       {type = "item", name = "express-underground-belt", amount = 1},
-      {type = "item", name = "bulk-inserter", amount = 6},
+      {type = "item", name = stack_inserters[bob_inserter_overhaul]["express"], amount = 6},
       {type = "item", name = "fast-mdrn-loader", amount = 1}
     }
   }
@@ -67,12 +101,12 @@ loaders["turbo-"] = {
     surface_conditions = data.raw["recipe"]["bob-turbo-underground-belt"].surface_conditions,
     ingredients = {
       {type = "item", name = "bob-turbo-underground-belt", amount = 1},
-      {type = "item", name = "bob-turbo-inserter", amount = 6},
+      {type = "item", name = inserters[bob_inserter_overhaul]["turbo"], amount = 6},
       {type = "item", name = "express-mdrn-loader", amount = 1}
     },
     stack_ingredients = {
       {type = "item", name = "bob-turbo-underground-belt", amount = 1},
-      {type = "item", name = "bob-turbo-bulk-inserter", amount = 6},
+      {type = "item", name = stack_inserters[bob_inserter_overhaul]["turbo"], amount = 6},
       {type = "item", name = "express-mdrn-loader", amount = 1}
     }
   }
@@ -87,12 +121,12 @@ loaders["ultimate-"] = {
   recipe_data = {
     ingredients = {
       {type = "item", name = "bob-ultimate-underground-belt", amount = 1},
-      {type = "item", name = "bob-express-inserter", amount = 6},
+      {type = "item", name = inserters[bob_inserter_overhaul]["ultimate"], amount = 6},
       {type = "item", name = "turbo-mdrn-loader", amount = 1}
     },
     stack_ingredients = {
       {type = "item", name = "bob-ultimate-underground-belt", amount = 1},
-      {type = "item", name = "bob-express-bulk-inserter", amount = 6},
+      {type = "item", name = stack_inserters[bob_inserter_overhaul]["ultimate"], amount = 6},
       {type = "item", name = "turbo-mdrn-loader", amount = 1}
     }
   }
@@ -112,19 +146,14 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
       count = 10,
       ingredients = {
         { "automation-science-pack", 1 },
-        --{ "logistic-science-pack", 1 },
       },
       time = 20,
     },
     recipe_data = {
       ingredients = {
         {type = "item", name = "bob-basic-underground-belt", amount = 1},
-        {type = "item", name = "burner-inserter", amount = 3}
+        {type = "item", name = inserters[bob_inserter_overhaul]["basic"], amount = 3}
       },
-      stack_ingredients = {
-        {type = "item", name = "bob-basic-underground-belt", amount = 1},
-        {type = "item", name = "burner-inserter", amount = 6}
-      }
     }
   }
   loaders[""].recipe_data.ingredients[#loaders[""].recipe_data.ingredients+1] = {

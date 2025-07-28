@@ -1,5 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: ????
+  Bugfixes:
+    - Fix failure to load when Bob's inserter overhaul is disabled
   Changes:
     - Move Bob's Logistics support to standalone mod
