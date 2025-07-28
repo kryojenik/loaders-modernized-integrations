@@ -35,6 +35,7 @@ loaders["fast-"] = {
 }
 
 loaders["express-"] = {
+  below_turbo = true,
   next_upgrade = "turbo-mdrn-loader",
   subgroup = "bob-logistic-tier-3",
   order = "j[loader]-1[express-mdrn-loader]",
