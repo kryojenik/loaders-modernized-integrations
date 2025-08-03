@@ -1,17 +1,18 @@
 {
-    "name": "loaders-modernized-addon",
+    "name": "loaders-modernized-py",
     "version": "1.0.0",
-    "title": "Loaders Modernized: Addon",
-    "description": "Add Modern Loaders to <addon>",
+    "title": "Loaders Modernized: Pyanodons",
+    "description": "Add support for Pyanodons to Loaders Modernized.  Adjust some recipes, add a few more settings.",
     "author": "kryojenik",
-    "contact": "https://github.com/kryojenik/loaders-modernized",
-    "homepage": "https://github.com/kryojenik/loaders-modernized",
-    "source": "https://github.com/kryojenik/loaders-modernized",
+    "contact": "https://github.com/kryojenik/loaders-modernized-py",
+    "homepage": "https://github.com/kryojenik/loaders-modernized-py",
+    "source": "https://github.com/kryojenik/loaders-modernized-py",
     "factorio_version": "2.0",
     "dependencies": [
         "base >= 2.0.60",
         "flib >= 0.16.2",
-        "loaders-modernized >= 0.8.15"
+        "loaders-modernized >= 1.0.2",
+        "pycoalprocessing"
     ],
     "package": {
         "git_publish_branch": "main",
