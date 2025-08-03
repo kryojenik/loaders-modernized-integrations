@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-wood",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "Loaders Modernized: Wooden Logistics",
     "description": "Add Modern Loaders to Wooden Logistics",
     "author": "kryojenik",
@@ -11,7 +11,7 @@
     "dependencies": [
         "base >= 2.0.60",
         "flib >= 0.16.2",
-        "loaders-modernized >= 0.8.15",
+        "loaders-modernized >= 1.0.0",
         "wood-logistics"
     ],
     "package": {
