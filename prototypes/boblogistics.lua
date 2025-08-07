@@ -132,12 +132,14 @@ loaders["ultimate-"] = {
   }
 }
 
-loaders["chute-"] = {
-  below_turbo = true,
-  no_filter = true,
-  speed_multiplier = .5,
-  subgroup = "bob-logistic-tier-0",
-}
+if startup_settings["mdrn-enable-chute"].value then
+  loaders["chute-"] = {
+    below_turbo = true,
+    no_filter = true,
+    speed_multiplier = .5,
+    subgroup = "bob-logistic-tier-0",
+  }
+end
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   if startup_settings["mdrn-enable-chute"].value then

@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: ????
-  Changes:
+  Bugfixes:
+    - Yeah...  Chutes again.  Turns out if you disable chutes and want to play Bob's, trying to modify
+      non-existing chutes doesn't work.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-08-07
