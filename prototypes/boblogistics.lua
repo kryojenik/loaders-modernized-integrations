@@ -132,7 +132,22 @@ loaders["ultimate-"] = {
   }
 }
 
+loaders["chute-"] = {
+  below_turbo = true,
+  no_filter = true,
+  speed_multiplier = .5,
+  subgroup = "bob-logistic-tier-0",
+}
+
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+  if startup_settings["mdrn-enable-chute"].value then
+    loaders["chute-"] = {
+      underground_name = "bob-basic-underground-belt",
+      next_upgrade = "basic-mdrn-loader",
+      tint = util.color("000000d1")
+    }
+  end
+
   loaders["basic-"] = {
     below_turbo = true,
     no_filter = true,

@@ -3,7 +3,3 @@ if mods["aai-industry"] then
   aai_industry.hidden = true
   aai_industry.forced_value = false
 end
-
-local chute = data.raw["bool-setting"]["mdrn-enable-chute"]
-chute.hidden = true
-chute.forced_value = false
