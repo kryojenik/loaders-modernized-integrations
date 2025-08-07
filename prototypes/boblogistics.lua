@@ -141,11 +141,10 @@ loaders["chute-"] = {
 
 if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   if startup_settings["mdrn-enable-chute"].value then
-    loaders["chute-"] = {
-      underground_name = "bob-basic-underground-belt",
-      next_upgrade = "basic-mdrn-loader",
-      tint = util.color("000000d1")
-    }
+    local chute = loaders["chute-"]
+    chute.underground_name = "bob-basic-underground-belt"
+    chute.next_upgrade = "basic-mdrn-loader"
+    chute.tint = util.color("000000d1")
   end
 
   loaders["basic-"] = {
