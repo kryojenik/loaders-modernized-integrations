@@ -1,0 +1,26 @@
+{
+    "name": "loaders-modernized-addon",
+    "version": "1.0.0",
+    "title": "Loaders Modernized: Addon",
+    "description": "Add Modern Loaders to <addon>",
+    "author": "kryojenik",
+    "contact": "https://github.com/kryojenik/loaders-modernized",
+    "homepage": "https://github.com/kryojenik/loaders-modernized",
+    "source": "https://github.com/kryojenik/loaders-modernized",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base >= 2.0.60",
+        "flib >= 0.16.2",
+        "loaders-modernized >= 1.0.0"
+    ],
+    "package": {
+        "git_publish_branch": "main",
+        "ignore": [
+            "TODO.md",
+            "types.lua",
+            "screenshots/*"
+        ],
+        "sync_portal_details": false,
+        "no_git_push": true
+    }
+}
