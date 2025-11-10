@@ -2,23 +2,28 @@
 local templates = {}
 local startup_settings = settings.startup
 
+-- Colors for deep-space loaders
 local colors = {
-  black = { hex = "000000d1", order = "05" },
-  blue = { hex = "0000ffd1", order = "06" },
-  cyan = { hex = "00ffffd1", order = "07" },
-  green = { hex = "00ff00d1", order = "08" },
-  magenta = { hex = "ff00ffd1", order = "09" },
-  red = { hex = "ff0000d1", order = "10" },
-  white = { hex = "ffffffd1", order = "11" },
-  yellow = { hex = "ffff00d1", order = "12" },
+  black = { hex = "000000d1", order = "08" },
+  blue = { hex = "0000ffd1", order = "09" },
+  cyan = { hex = "00ffffd1", order = "10" },
+  green = { hex = "00ff00d1", order = "11" },
+  magenta = { hex = "ff00ffd1", order = "12" },
+  red = { hex = "ff0000d1", order = "13" },
+  white = { hex = "ffffffd1", order = "14" },
+  yellow = { hex = "ffff00d1", order = "15" },
 }
 
+-- Space loader
 templates.loaders = {
   ["space-"] = {
     next_upgrade = "deep-space-mdrn-loader-black",
     underground_name = "se-space-underground-belt",
-    order = "04",
+    order = "07",
     tint = util.color(colors.white.hex),
+    unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
+      and "se-space-transport-belt"
+      or "space-mdrn-loader",
     prerequisite_techs = { "se-space-belt", "fast-mdrn-loader" },
     recipe_data = {
       ingredients = {
@@ -37,6 +42,7 @@ templates.loaders = {
   },
 }
 
+-- Deep space loaders
 local rd_black = {
   ingredients = {
     { type = "item", name = "se-deep-space-transport-belt-black", amount = 1 },
@@ -63,12 +69,12 @@ local rd_color = {
 for name, color in pairs(colors) do
   local color_enabled = startup_settings["se-deep-space-belt-" .. name]
   if name == "black" or (color_enabled and color_enabled.value) then
-    templates.loaders["deep-space" .. name] = {
+    templates.loaders["deep-space-" .. name] = {
       underground_name = "se-deep-space-underground-belt-" .. name,
       name = "deep-space-mdrn-loader-" .. name,
       unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
         and "se-deep-space-transport-belt"
-        or "deep-space-mdrn-loader-black",
+        or "deep-space-mdrn-loader",
       order = color.order,
       tint = util.color(color.hex),
       dark_frame = true,
@@ -110,12 +116,106 @@ MdrnLoaders.make_modern_loaders(templates)
 -- Make sure our new SE loaders can be placed on space platforms
 for prefix, loader in pairs(templates.loaders) do
   if prefix ~= "chute-" then
+    local name = loader.name or (prefix .. "mdrn-loader")
 ---@diagnostic disable-next-line: inject-field
-    data.raw["loader-1x1"][loader.name].se_allow_in_space = true
+    data.raw["loader-1x1"][name].se_allow_in_space = true
   end
 end
 
--- You cannon upgrade from a land restricted loader to a space capable loader. Collision masks must match.
--- The stack loader is set to work on space platforms.  Perhaps there should be a separate land stack loader.
 
+
+
+
+
+if mods["Krastorio2"] then
+  templates.loaders = {
+    [""] = {
+      recipe_data = {
+        ingredients = {
+          { type = "item", name = "iron-gear-wheel", amount = 10 },
+          { type = "item", name = "electronic-circuit", amount = 5 },
+          { type = "item", name = "transport-belt", amount = 1 }
+        },
+        stack_ingredients = {
+          { type = "item", name = "iron-gear-wheel", amount = 20 },
+          { type = "item", name = "electronic-circuit", amount = 10 },
+          { type = "item", name = "transport-belt", amount = 1 }
+        }
+      },
+    },
+    ["fast-"] = {
+      recipe_data = {
+        ingredients = {
+          { type = "item", name = "electric-motor", amount = 5 },
+          { type = "item", name = "advanced-circuit", amount = 5 },
+          { type = "item", name = "fast-transport-belt", amount = 1 },
+          { type = "item", name = "mdrn-loader", amount = 1 },
+        },
+        stack_ingredients = {
+          { type = "item", name = "electric-motor", amount = 10 },
+          { type = "item", name = "advanced-circuit", amount = 10 },
+          { type = "item", name = "fast-transport-belt", amount = 1 },
+          { type = "item", name = "mdrn-loader", amount = 1 },
+        }
+      },
+    },
+    ["express-"] = {
+      recipe_data = {
+        ingredients = {
+          { type = "item", name = "electric-engine-unit", amount = 5 },
+          { type = "item", name = "processing-unit", amount = 5 },
+          { type = "item", name = "express-transport-belt", amount = 1 },
+          { type = "item", name = "fast-mdrn-loader", amount = 1 },
+        },
+        stack_ingredients = {
+          { type = "item", name = "electric-engine-unit", amount = 10 },
+          { type = "item", name = "processing-unit", amount = 10 },
+          { type = "item", name = "express-transport-belt", amount = 1 },
+          { type = "item", name = "fast-mdrn-loader", amount = 1 },
+        }
+      },
+    },
+    ["advanced-"] = {
+      recipe_data = {
+        ingredients = {
+          { type = "item", name = "kr-imersium-gear-wheel", amount = 5 },
+          { type = "item", name = "kr-rare-metals", amount = 5 },
+          { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
+          { type = "item", name = "express-mdrn-loader", amount = 1 },
+        },
+        stack_ingredients = {
+          { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
+          { type = "item", name = "kr-rare-metals", amount = 10 },
+          { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
+          { type = "item", name = "express-mdrn-loader", amount = 1 },
+        }
+      },
+    },
+    ["superior-"] = {
+      recipe_data = {
+        ingredients = {
+          { type = "item", name = "kr-imersium-gear-wheel", amount = 5 },
+          { type = "item", name = "se-heavy-bearing", amount = 5 },
+          { type = "item", name = "kr-rare-metals", amount = 5 },
+          { type = "item", name = "kr-superior-transport-belt", amount = 1 },
+          { type = "item", name = "advanced-mdrn-loader", amount = 1 },
+          { type = "item", name = "kr-imersium-plate", amount = 5 },
+        },
+        stack_ingredients = {
+          { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
+          { type = "item", name = "se-heavy-bearing", amount = 10 },
+          { type = "item", name = "kr-rare-metals", amount = 10 },
+          { type = "item", name = "kr-superior-transport-belt", amount = 1 },
+          { type = "item", name = "advanced-mdrn-loader", amount = 1 },
+          { type = "item", name = "kr-imersium-plate", amount = 10 },
+        }
+      },
+    }
+  }
+end
+
+MdrnLoaders.make_modern_loaders(templates)
+
+-- You cannot upgrade from a land restricted loader to a space capable loader. Collision masks must match.
+-- The stack loader is set to work on space platforms.  Perhaps there should be a separate land stack loader.
 data.raw["loader-1x1"]["express-mdrn-loader"].next_upgrade = nil
