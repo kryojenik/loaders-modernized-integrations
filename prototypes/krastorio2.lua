@@ -4,6 +4,7 @@ templates.loaders = {
   ["advanced-"] = {
     previous_prefix = "express-",
     underground_name = "kr-advanced-underground-belt",
+    order = "05",
     tint = util.color("4fbf38d1"),                                 -- Green tint for Advanced tier
     prerequisite_techs = { "kr-logistic-4", "express-mdrn-loader" }, -- Link to logistic-4 technology
     recipe_data = {
@@ -17,6 +18,7 @@ templates.loaders = {
   ["superior-"] = {
     previous_prefix = "advanced-",
     underground_name = "kr-superior-underground-belt",
+    order = "06",
     tint = util.color("862f9fd1"),                                  -- Purple tint for superior tier
     prerequisite_techs = { "kr-logistic-5", "advanced-mdrn-loader" }, -- Link to logistic-5 technology
     recipe_data = {
@@ -30,6 +32,19 @@ templates.loaders = {
 }
 
 if settings.startup["mdrn-use-k2-recipes"].value == true then
+  -- Adjust the new K2 loaders we're adding
+  templates.loaders["advanced-"].recipe_data.ingredients = {
+    { type = "item", name = "kr-rare-metals", amount = 10 },
+    { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
+    { type = "item", name = "express-mdrn-loader", amount = 2 },
+  }
+  templates.loaders["superior-"].recipe_data.ingredients = {
+    { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
+    { type = "item", name = "kr-superior-transport-belt", amount = 1 },
+    { type = "item", name = "advanced-mdrn-loader", amount = 2 },
+  }
+
+  -- Create new template entries to modify already existing loaders from base.
   templates.loaders[""] = {
     recipe_data = {
       ingredients = {
@@ -56,16 +71,6 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
         { type = "item", name = "fast-mdrn-loader", amount = 2 },
       }
     }
-  }
-  templates.loaders["advanced-"].recipe_data.ingredients = {
-    { type = "item", name = "kr-rare-metals", amount = 10 },
-    { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
-    { type = "item", name = "express-mdrn-loader", amount = 2 },
-  }
-  templates.loaders["superior-"].recipe_data.ingredients = {
-    { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
-    { type = "item", name = "kr-superior-transport-belt", amount = 1 },
-    { type = "item", name = "advanced-mdrn-loader", amount = 2 },
   }
 end
 
