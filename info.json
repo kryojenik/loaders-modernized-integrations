@@ -11,7 +11,7 @@
     "dependencies": [
         "base >= 2.0.60",
         "flib >= 0.16.2",
-        "loaders-modernized >= 1.0.0",
+        "loaders-modernized >= 1.0.5",
         "boblogistics"
     ],
     "package": {
