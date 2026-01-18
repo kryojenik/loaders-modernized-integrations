@@ -9,10 +9,8 @@
     "source": "https://github.com/kryojenik/loaders-modernized",
     "factorio_version": "2.0",
     "dependencies": [
-        "base >= 2.0.60",
-        "flib >= 0.16.2",
-        "loaders-modernized >= 1.0.0",
-        "5dim_transport"
+        "loaders-modernized >= 1.0.5",
+        "5dim_transport >= 2.0.20"
         
     ],
     "package": {

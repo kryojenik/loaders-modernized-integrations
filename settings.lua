@@ -8,17 +8,6 @@ data:extend({
     allowed_values = {"none", "1x2", "all"}
   },
 })
-if mods["space-age"] then
-  data:extend({
-    {
-      type = "bool-setting",
-      name = "mdrn-keep-turbo-loader",
-      order = "sga",
-      setting_type = "startup",
-      default_value = false
-    },
-  })
-end
 local mut = data.raw["string-setting"]["mdrn-unlock-technology"]
 mut.default_value = "belt"
 mut.allowed_values = { "belt" }

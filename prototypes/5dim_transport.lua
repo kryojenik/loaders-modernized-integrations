@@ -12,8 +12,18 @@ data:extend({
   }
 })
 
---- New Loaders
+--- 5Dim integrated Mk4 items directly as turbo tier when space-age is loaded.
+--- They are still Mk4 without space-age
+local loader = "mdrn-loader-04"
+local underground = "5d-underground-belt-04"
+local belt = "5d-transport-belt-04"
+if mods["space-age"] then
+  loader = "turbo-mdrn-loader"
+  underground = "turbo-underground-belt"
+  belt = "turbo-transport-belt"
+end
 
+--- New Loaders
 ---@type table<string, LMLoaderTemplate>
 local templates = {}
 templates.loaders = {
@@ -61,7 +71,7 @@ templates.loaders = {
     underground_name = "express-underground-belt",
     group = "transport",
     subgroup = "transport-loader-mdrn",
-    next_upgrade = "mdrn-loader-04",
+    next_upgrade = loader,
     tint = util.color("06c2f6d1"),
     unlocked_by = "logistics-3",
     recipe_data = {
@@ -72,8 +82,8 @@ templates.loaders = {
     }
   },
   ["04"] = {
-    name = "mdrn-loader-04",
-    underground_name = "5d-underground-belt-04",
+    name = loader,
+    underground_name = underground,
     group = "transport",
     subgroup = "transport-loader-mdrn",
     next_upgrade = "mdrn-loader-05",
@@ -81,7 +91,7 @@ templates.loaders = {
     unlocked_by = "logistics-4",
     recipe_data = {
       ingredients = {
-        {type = "item", name = "5d-transport-belt-04", amount = 5},
+        {type = "item", name = belt, amount = 5},
         {type = "item", name = "express-mdrn-loader", amount = 1},
       }
     }
@@ -97,7 +107,7 @@ templates.loaders = {
     recipe_data = {
       ingredients = {
         {type = "item", name = "5d-transport-belt-05", amount = 5},
-        {type = "item", name = "mdrn-loader-04", amount = 1},
+        {type = "item", name = loader, amount = 1},
       }
     }
   },
@@ -179,6 +189,14 @@ templates.loaders = {
 
 MdrnLoaders.make_modern_loaders(templates)
 
+-- 5Dim left the "turbo-transport-belt" technology laying around in addition to the logistics-4
+-- technology it has now duplicated unlocks into for turbo tier.
+-- Make sure the turbo-mdrn-loader can be unlocked by either tier
+
+if mods["space-age"] then
+  utils.add_recipe_to_effects(data.raw["technology"]["logistics-4"], "turbo-mdrn-loader")
+end
+
 -- Hide 5Dim 1x1 loaders
 if startup_settings["mdrn-keep-5d-loaders"].value ~= "all" then
   for tier, loader in pairs(templates.loaders) do
@@ -188,8 +206,8 @@ if startup_settings["mdrn-keep-5d-loaders"].value ~= "all" then
     data.raw["loader-1x1"][name_5d].next_upgrade = nil 
     data.raw["item"][name_5d].hidden = true
     data.raw["recipe"][name_5d].hidden = true
-    local effects = data.raw["technology"][loader.unlocked_by].effects
-    utils.remove_recipe_from_effects(effects, name_5d)
+    local tech = data.raw["technology"][loader.unlocked_by]
+    utils.remove_recipe_from_effects(tech, name_5d)
   end
 end
 
@@ -211,8 +229,8 @@ if startup_settings["mdrn-keep-5d-loaders"].value == "none" then
     ldr_entity.next_upgrade = nil
     data.raw["recipe"][name_5d].hidden = true
     data.raw["item"][name_5d].hidden = true
-    local effects = data.raw["technology"][loader.unlocked_by].effects
-    utils.remove_recipe_from_effects(effects, name_5d)
+    local tech = data.raw["technology"][loader.unlocked_by]
+    utils.remove_recipe_from_effects(tech, name_5d)
     ::continue::
   end
 end
@@ -256,39 +274,5 @@ if startup_settings["mdrn-enable-stacking"].value == "stack-tier" then
         }
       end
     end
-  end
-end
-
--- Someone may want to keep the turbo loaders around -- Why?
-if mods["space-age"] and startup_settings["mdrn-keep-turbo-loader"].value then
-  for _, name in pairs{ "turbo-mdrn-loader", "turbo-mdrn-loader-split" } do
-    local turbo_ldr = data.raw["loader-1x1"][name]
-    if turbo_ldr then
-      turbo_ldr.next_upgrade = nil
-    end
-  end
-
-  local turbo_item = data.raw["item"]["turbo-mdrn-loader"]
-  if turbo_item then
-    turbo_item.group = "transport"
-    turbo_item.subgroup = "transport-turbo-belt"
-    turbo_item.order = "d"
-  end
-
-else
-  for _, name in pairs{"turbo-mdrn-loader", "turbo-mdrn-loader-split"} do
-  local turbo_ldr = data.raw["loader-1x1"][name]
-    if turbo_ldr then
-      turbo_ldr.hidden_in_factoriopedia = true
-      turbo_ldr.next_upgrade = nil
-    end
-  end
-
-  if data.raw["recipe"]["turbo-mdrn-loader"] then
-    data.raw["recipe"]["turbo-mdrn-loader"].hidden = true
-  end
-
-  if data.raw["item"]["turbo-mdrn-loader"] then
-    data.raw["item"]["turbo-mdrn-loader"].hidden = true
   end
 end
