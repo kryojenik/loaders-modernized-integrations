@@ -136,6 +136,7 @@ if startup_settings["mdrn-enable-chute"].value then
   loaders["chute-"] = {
     below_turbo = true,
     no_filter = true,
+    no_tech = true,
     speed_multiplier = .5,
     subgroup = "bob-logistic-tier-0",
   }
