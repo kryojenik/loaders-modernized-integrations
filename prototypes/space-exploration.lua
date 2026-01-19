@@ -26,7 +26,7 @@ templates.loaders = {
     order = "07",
     tint = util.color(colors.white.hex),
     unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
-      and "se-space-transport-belt"
+      and "se-space-belt"
       or space_tech,
     prerequisite_techs = { "se-space-belt", fast_tech },
     recipe_data = {
@@ -128,11 +128,6 @@ for prefix, loader in pairs(templates.loaders) do
     data.raw["loader-1x1"][name .. "-split"].se_allow_in_space = true
   end
 end
-
-
-
-
-
 
 if mods["Krastorio2"] then
   templates.loaders = {
