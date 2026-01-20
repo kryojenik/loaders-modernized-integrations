@@ -1,3 +1,4 @@
+local utils = require("__space-exploration__.data_util")
 -- Define the loader template for the tier 5 turbo belt
 local templates = {}
 local startup_settings = settings.startup
@@ -14,10 +15,6 @@ local colors = {
   yellow = { hex = "ffff00d1", order = "15" },
 }
 
-local space_tech = data.raw["technology"]["aai-se-space-loader"] and "se-space-mdrn-loader" or "space-mdrn-loader"
-local deep_space_tech = data.raw["technology"]["aai-se-deep-space-loader"] and "se-deep-space-mdrn-loader" or "deep-space-mdrn-loader"
-local fast_tech = data.raw["technology"]["aai-fast-loader"] and "aai-fast-loader" or "fast-mdrn-loader"
-
 -- Space loader
 templates.loaders = {
   ["space-"] = {
@@ -25,10 +22,7 @@ templates.loaders = {
     underground_name = "se-space-underground-belt",
     order = "07",
     tint = util.color(colors.white.hex),
-    unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
-      and "se-space-belt"
-      or space_tech,
-    prerequisite_techs = { "se-space-belt", fast_tech },
+    prerequisite_techs = { "se-space-belt", "fast-mdrn-loader" },
     recipe_data = {
       ingredients = {
         { type = "item", name = "se-space-transport-belt", amount = 1 },
@@ -78,11 +72,12 @@ for name, color in pairs(colors) do
       name = "deep-space-mdrn-loader-" .. name,
       unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
         and "se-deep-space-transport-belt"
-        or deep_space_tech,
+        or "deep-space-mdrn-loader",
       order = color.order,
       tint = util.color(color.hex),
+      no_tech_tint = name ~= "black",
       dark_frame = true,
-      prerequisite_techs = { "se-deep-space-transport-belt", space_tech },
+      prerequisite_techs = { "se-deep-space-transport-belt", "space-mdrn-loader" },
       recipe_data = name == "black" and rd_black or rd_color,
     }
   end
@@ -117,6 +112,11 @@ or startup_settings["mdrn-enable-chute"].value then
 end
 
 MdrnLoaders.make_modern_loaders(templates)
+
+-- Add science packs to techs to make them fit more thematically with Space Exploration
+utils.tech_add_ingredients("mdrn-loader", {"logistic-science-pack"})
+utils.tech_add_ingredients("fast-mdrn-loader", {"chemical-science-pack"})
+utils.tech_add_ingredients("space-mdrn-loader", {"space-science-pack"})
 
 -- Make sure our new SE loaders can be placed on space platforms
 for prefix, loader in pairs(templates.loaders) do
