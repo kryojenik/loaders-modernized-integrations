@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-py",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "title": "Loaders Modernized: Pyanodons",
     "description": "Add support for Pyanodons to Loaders Modernized.  Adjust some recipes, add a few more settings.",
     "author": "kryojenik",
