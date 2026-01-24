@@ -2,6 +2,8 @@
 Version: 1.0.2
 Date: ????
   Changes:
+    - Updates to work with Loaders Modernized 1.0.5
+    - Updated dependencies
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2025-08-04
