@@ -8,4 +8,4 @@ do use power.  So keep those power poles handy!
 
 ## Mod Krastorio 2
 
-This mod adds support to Loaders Modernized to create loader tiers for Krastorio 2
+This mod adds support to Loaders Modernized to create loader tiers for [Krastorio 2](https://mods.factorio.com/mod/Krastorio2)
