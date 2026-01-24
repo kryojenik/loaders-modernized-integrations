@@ -9,3 +9,4 @@ do use power.  So keep those power poles handy!
 ## Space Exploration
 
 This mod adds support to Loaders Modernized to create loader tiers for [Space Exploration](https://mods.factorio.com/mod/space-exploration).
+There is also support to use in combination with [Krastorio 2](https://mods.factorio.com/mod/Krastorio2)
