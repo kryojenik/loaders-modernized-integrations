@@ -3,6 +3,7 @@ Version: 1.0.4
 Date: ????
   Changes:
     - Support changes in 5Dim: New Transport 2.0.20
+    - Updates to dependencies and adjustments to work with Loaders Modernized 1.0.5
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-11-01
