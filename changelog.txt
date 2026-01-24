@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: ????
+Date: 2026-01-23
   Changes:
     - Change default to use K2 recipes
     - Update dependencies
