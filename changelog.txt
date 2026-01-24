@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: ????
+Date: 2026-01-23
   Features:
     - Initial release
     - Add space and deep space loaders to Space Exploration.
