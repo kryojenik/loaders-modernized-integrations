@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Change default to use K2 recipes
     - Update dependencies
+    - Updates to work with Loaders Modernized 1.0.5
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2025-10-30
