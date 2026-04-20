@@ -1,6 +1,5 @@
 -- Define the loader template for the tier 5 turbo belt
-local templates = {}
-templates.loaders = {
+local loaders = {
   ["advanced-"] = {
     previous_prefix = "express-",
     underground_name = "kr-advanced-underground-belt",
@@ -33,19 +32,19 @@ templates.loaders = {
 
 if settings.startup["mdrn-use-k2-recipes"].value == true then
   -- Adjust the new K2 loaders we're adding
-  templates.loaders["advanced-"].recipe_data.ingredients = {
+  loaders["advanced-"].recipe_data.ingredients = {
     { type = "item", name = "kr-rare-metals", amount = 10 },
     { type = "item", name = "kr-advanced-transport-belt", amount = 1 },
     { type = "item", name = "express-mdrn-loader", amount = 2 },
   }
-  templates.loaders["superior-"].recipe_data.ingredients = {
+  loaders["superior-"].recipe_data.ingredients = {
     { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
     { type = "item", name = "kr-superior-transport-belt", amount = 1 },
     { type = "item", name = "advanced-mdrn-loader", amount = 2 },
   }
 
   -- Create new template entries to modify already existing loaders from base.
-  templates.loaders[""] = {
+  loaders[""] = {
     recipe_data = {
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },
@@ -54,7 +53,7 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
       }
     }
   }
-  templates.loaders["fast-"] = {
+  loaders["fast-"] = {
     recipe_data = {
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },
@@ -63,7 +62,7 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
       }
     }
   }
-  templates.loaders["express-"] = {
+  loaders["express-"] = {
     recipe_data = {
       ingredients = {
         { type = "item", name = "kr-steel-gear-wheel", amount = 10 },
@@ -74,4 +73,4 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
   }
 end
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)

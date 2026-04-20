@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-k2",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "title": "Loaders Modernized: Krastorio 2",
     "description": "Add Modern Loaders to Krastorio 2",
     "author": "kryojenik",
@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-k2",
     "factorio_version": "2.0",
     "dependencies": [
-        "loaders-modernized >= 1.0.5",
+        "loaders-modernized >= 1.1.0",
         "Krastorio2 >= 2.0.14"
     ],
     "package": {
