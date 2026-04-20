@@ -25,8 +25,7 @@ end
 
 --- New Loaders
 ---@type table<string, LMLoaderTemplate>
-local templates = {}
-templates.loaders = {
+local loaders = {
   ["01"] = {
     name = "mdrn-loader",
     localised_name = {"entity-name.mdrn-loader-01"},
@@ -187,7 +186,7 @@ templates.loaders = {
   },
 }
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)
 
 -- 5Dim left the "turbo-transport-belt" technology laying around in addition to the logistics-4
 -- technology it has now duplicated unlocks into for turbo tier.
@@ -199,7 +198,7 @@ end
 
 -- Hide 5Dim 1x1 loaders
 if startup_settings["mdrn-keep-5d-loaders"].value ~= "all" then
-  for tier, loader in pairs(templates.loaders) do
+  for tier, loader in pairs(loaders) do
     local name_5d = "5d-loader-1x1-" .. tier
     data.raw["loader-1x1"][name_5d].hidden_in_factoriopedia = true
     data.raw["loader-1x1"][name_5d].minable.result = loader.name
@@ -213,7 +212,7 @@ end
 
 --- Hide 5Dim 1x2 loaders
 if startup_settings["mdrn-keep-5d-loaders"].value == "none" then
-  for tier, loader in pairs(templates.loaders) do
+  for tier, loader in pairs(loaders) do
     local name_5d = "5d-loader-" .. tier
     if not string.match(loader.name, "%-" .. tier .. "$") then
       name_5d = string.gsub(loader.name, "mdrn%-", "")
