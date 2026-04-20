@@ -5,8 +5,7 @@ end
 local startup_settings = settings.startup
 
 --- New loader
-local templates = {}
-templates.loaders = {
+local loaders = {
   ["wood-"] = {
     no_stack = true,
     no_filter = true,
@@ -27,7 +26,7 @@ templates.loaders = {
   }
 }
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)
 
 --- Change existing loaders
 local chute_name = "chute-mdrn-loader"
