@@ -5,13 +5,13 @@ if not mods["Krastorio2"] then
   return
 end
 
-local templates = {}
 local startup_settings = settings.startup
 
 local move_to_aai = (mods["aai-loaders"] and startup_settings["aai-loaders-mode"].value ~= "graphics-only")
 local pull_k2_to_mdrn = not move_to_aai and startup_settings["kr-loaders"].value
 
-templates.loaders = {
+---@type table<string, LMLoaderTemplate>
+local loaders = {
   [""] = {
     unlocked_by = move_to_aai and "aai-loader" or nil,
     recipe_data = {
@@ -128,9 +128,9 @@ elseif pull_k2_to_mdrn then
   end
 end
 
-templates.loaders["advanced-"].unit.time = 60
-templates.loaders["advanced-"].unit.count = 350
-templates.loaders["superior-"].unit.time = 60
-templates.loaders["superior-"].unit.count = 450
+loaders["advanced-"].unit.time = 60
+loaders["advanced-"].unit.count = 350
+loaders["superior-"].unit.time = 60
+loaders["superior-"].unit.count = 450
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)

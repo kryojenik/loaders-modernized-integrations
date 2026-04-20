@@ -1,11 +1,11 @@
 local utils = require("__space-exploration__.data_util")
 local const = require("constants")
 -- Define the loader template for the tier 5 turbo belt
-local templates = {}
 local startup_settings = settings.startup
 
 -- Space loader
-templates.loaders = {
+---@type table<string, LMLoaderTemplate>
+local loaders = {
   ["space-"] = {
     next_upgrade = "deep-space-mdrn-loader-black",
     underground_name = "se-space-underground-belt",
@@ -56,7 +56,7 @@ local rd_color = {
 for name, color in pairs(const.colors) do
   local color_enabled = startup_settings["se-deep-space-belt-" .. name]
   if name == "black" or (color_enabled and color_enabled.value) then
-    templates.loaders["deep-space-" .. name] = {
+    loaders["deep-space-" .. name] = {
       underground_name = "se-deep-space-underground-belt-" .. name,
       name = "deep-space-mdrn-loader-" .. name,
       unlocked_by = startup_settings["mdrn-unlock-technology"].value == "belt"
@@ -85,7 +85,7 @@ or startup_settings["mdrn-enable-chute"].value then
   }
 
   if startup_settings["mdrn-enable-stacking"].value == "stack-tier" then
-    templates.loaders["stack-"] = {
+    loaders["stack-"] = {
       tint = util.color("fc792fd1"),
       subgroup = "belt-loader-special",
       dark_frame = true
@@ -93,14 +93,14 @@ or startup_settings["mdrn-enable-chute"].value then
   end
 
   if startup_settings["mdrn-enable-chute"].value then
-    templates.loaders["chute-"] = {
+    loaders["chute-"] = {
       no_tech = true,
       subgroup = "belt-loader-special",
     }
   end
 end
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)
 
 -- Add science packs to techs to make them fit more thematically with Space Exploration
 utils.tech_add_ingredients("mdrn-loader", {"logistic-science-pack"})
@@ -108,7 +108,7 @@ utils.tech_add_ingredients("fast-mdrn-loader", {"chemical-science-pack"})
 utils.tech_add_ingredients("space-mdrn-loader", {"space-science-pack"})
 
 -- Make sure our new SE loaders can be placed on space platforms
-for prefix, loader in pairs(templates.loaders) do
+for prefix, loader in pairs(loaders) do
   if prefix ~= "chute-" then
     local name = loader.name or (prefix .. "mdrn-loader")
     ---@diagnostic disable: inject-field
