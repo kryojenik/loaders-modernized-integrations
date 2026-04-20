@@ -1,8 +1,7 @@
 -- Iper Belt support
 
 ---@type table<string, LMLoaderTemplate>
-local templates = {}
-templates.loaders = {
+local loaders = {
   ["iper-"] = {
     order = "d-iper",
     tint = util.color("4a5ad2d1"),
@@ -24,7 +23,7 @@ templates.loaders = {
 }
 
 if settings.startup["mdrn-enable-stacking"].value == "stack-tier" then
-  templates.loaders["iper-"].next_upgrade = "stack-mdrn-loader"
+  loaders["iper-"].next_upgrade = "stack-mdrn-loader"
 end
 
-MdrnLoaders.make_modern_loaders(templates)
+MdrnLoaders.add_loaders(loaders)
