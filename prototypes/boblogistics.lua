@@ -189,4 +189,4 @@ if startup_settings["mdrn-enable-stacking"].value =="stack-tier" then
   }
 end
 
-MdrnLoaders.make_modern_loaders{loaders = loaders}
+MdrnLoaders.add_loaders(loaders)

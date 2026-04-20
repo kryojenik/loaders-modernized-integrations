@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-bobs",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "title": "Loaders Modernized: Bob's Logistics",
     "description": "Add Modern Loaders to Bob's Logistics",
     "author": "kryojenik",
@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-bobs",
     "factorio_version": "2.0",
     "dependencies": [
-        "loaders-modernized >= 1.0.5",
+        "loaders-modernized >= 1.1.0",
         "boblogistics"
     ],
     "package": {
