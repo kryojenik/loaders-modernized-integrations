@@ -7,13 +7,12 @@ local startup_settings = settings.startup
 --- New loader
 local loaders = {
   ["wood-"] = {
-    no_stack = true,
-    no_filter = true,
-    below_turbo = true,
+    stacking = false,
+    filter = false,
     tint = util.color("a47f6de1"),
     prerequisite_techs = {"wood-logistics"},
     underground_name = "wood-underground-belt",
-    previous_prefix = "chute-",
+    upgrade_from_prefix = "chute-",
     next_upgrade = "mdrn-loader",
     order = "a-wood",
     recipe_data = {
