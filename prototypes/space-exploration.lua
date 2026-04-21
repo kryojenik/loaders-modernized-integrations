@@ -64,7 +64,7 @@ for name, color in pairs(const.colors) do
         or "deep-space-mdrn-loader",
       order = color.order,
       tint = util.color(color.hex),
-      no_tech_tint = name ~= "black",
+      tech_tint = name == "black",
       dark_frame = true,
       prerequisite_techs = { "se-deep-space-transport-belt", "space-mdrn-loader" },
       recipe_data = name == "black" and rd_black or rd_color,
@@ -94,7 +94,7 @@ or startup_settings["mdrn-enable-chute"].value then
 
   if startup_settings["mdrn-enable-chute"].value then
     loaders["chute-"] = {
-      no_tech = true,
+      tech_data = false,
       subgroup = "belt-loader-special",
     }
   end
