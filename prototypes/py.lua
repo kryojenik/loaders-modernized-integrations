@@ -7,7 +7,7 @@ and data.raw["inserter"]["py-stack-inserter"] then
       order = "z",
       tint = util.color("F5F5F5D1"),
       underground_name = "express-underground-belt",
-      previous_prefix = "express-",
+      upgrade_from_prefix = "express-",
       prerequisite_techs = { "py-transport-belt-capacity-1", "express-mdrn-loader" },
       max_belt_stack_size = data.raw["utility-constants"].default.max_belt_stack_size,
       recipe_data = {
