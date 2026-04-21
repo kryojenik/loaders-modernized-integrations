@@ -1,7 +1,8 @@
 -- Define the loader template for the tier 5 turbo belt
 local loaders = {
   ["advanced-"] = {
-    previous_prefix = "express-",
+    upgrade_from_prefix = "express-",
+    next_upgrade = "mdrn-superior-loader",
     underground_name = "kr-advanced-underground-belt",
     order = "05",
     tint = util.color("4fbf38d1"),                                 -- Green tint for Advanced tier
@@ -15,7 +16,6 @@ local loaders = {
     }
   },
   ["superior-"] = {
-    previous_prefix = "advanced-",
     underground_name = "kr-superior-underground-belt",
     order = "06",
     tint = util.color("862f9fd1"),                                  -- Purple tint for superior tier
