@@ -6,7 +6,7 @@ end
 -- Define the loader template for the tier 5 turbo belt
 local loaders = {
   ["hyper-"] = {
-    previous_prefix = "turbo-",
+    upgrade_from_prefix = "turbo-",
     tint = util.color("8c48dbd1"),                               -- Purple tint for hyper tier
     prerequisite_techs = { "hyper-logistics", "turbo-mdrn-loader" }, -- Link to hyper-logistics technology
     recipe_data = {
