@@ -38,7 +38,6 @@ local bob_inserter_overhaul = startup_settings["bobmods-logistics-inserteroverha
 local loaders = {}
 
 loaders[""] = {
-  below_turbo = true,
   subgroup = "bob-logistic-tier-1",
   order = "j[loader]-1[mdrn-loader]",
   recipe_data = {
@@ -50,7 +49,6 @@ loaders[""] = {
 }
 
 loaders["fast-"] = {
-  below_turbo = true,
   subgroup = "bob-logistic-tier-2",
   order = "j[loader]-1[fast-mdrn-loader]",
   recipe_data = {
@@ -69,7 +67,6 @@ loaders["fast-"] = {
 }
 
 loaders["express-"] = {
-  below_turbo = true,
   next_upgrade = "turbo-mdrn-loader",
   subgroup = "bob-logistic-tier-3",
   order = "j[loader]-1[express-mdrn-loader]",
@@ -90,7 +87,7 @@ loaders["express-"] = {
 
 loaders["turbo-"] = {
   next_upgrade = "ultimate-mdrn-loader",
-  previous_prefix = "express-",
+  upgrade_from_prefix = "express-",
   subgroup = "bob-logistic-tier-4",
   order = "j[loader]-1[turbo-mdrn-loader]",
   underground_name = "bob-turbo-underground-belt",
@@ -134,9 +131,8 @@ loaders["ultimate-"] = {
 
 if startup_settings["mdrn-enable-chute"].value then
   loaders["chute-"] = {
-    below_turbo = true,
-    no_filter = true,
-    no_tech = true,
+    filter = false,
+    tech_data = false,
     speed_multiplier = .5,
     subgroup = "bob-logistic-tier-0",
   }
@@ -151,8 +147,7 @@ if settings.startup["bobmods-logistics-beltoverhaul"].value == true then
   end
 
   loaders["basic-"] = {
-    below_turbo = true,
-    no_filter = true,
+    filter = false,
     next_upgrade = "mdrn-loader",
     underground_name = "bob-basic-underground-belt",
     tint = util.color("808080d1"),
