@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-ev",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "title": "Loaders Modernized: Extended Vanilla",
     "description": "Add Modern Loaders to Extended Vanilla",
     "author": "kryojenik",
@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-ev",
     "factorio_version": "2.0",
     "dependencies": [
-        "loaders-modernized >= 1.1.0",
+        "loaders-modernized >= 2.0.0",
         "ev-logistics"
     ],
     "package": {
