@@ -3,13 +3,13 @@ if not mods["boblogistics"] then
 end
 
 -- Bobs removes the production science pack from the express tier.  Remove if from the loader
-bobmods.lib.tech.remove_science_pack("express-mdrn-loader", "production-science-pack")
+bobmods.lib.tech.remove_science_pack("mdrn-express-loader", "production-science-pack")
 
 if bobmods.tech and bobmods.tech.advanced_logistic_science then
-  bobmods.lib.tech.replace_science_pack("turbo-mdrn-loader", "production-science-pack", "bob-advanced-logistic-science-pack")
-  bobmods.lib.tech.add_science_pack("ultimate-mdrn-loader", "bob-advanced-logistic-science-pack", 1)
+  bobmods.lib.tech.replace_science_pack("mdrn-turbo-loader", "production-science-pack", "bob-advanced-logistic-science-pack")
+  bobmods.lib.tech.add_science_pack("mdrn-ultimate-loader", "bob-advanced-logistic-science-pack", 1)
 end
 
 if mods['space-age'] then
-  data.raw.recipe['turbo-mdrn-loader'].surface_conditions = nil
+  data.raw.recipe['mdrn-turbo-loader'].surface_conditions = nil
 end
