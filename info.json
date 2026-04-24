@@ -1,6 +1,6 @@
 {
     "name": "loaders-modernized-wood",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "title": "Loaders Modernized: Wooden Logistics",
     "description": "Add Modern Loaders to Wooden Logistics",
     "author": "kryojenik",
@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-wood",
     "factorio_version": "2.0",
     "dependencies": [
-        "loaders-modernized >= 1.1.0",
+        "loaders-modernized >= 2.0.0",
         "wood-logistics"
     ],
     "package": {
@@ -20,6 +20,6 @@
             "screenshots/*"
         ],
         "sync_portal_details": true,
-        "no_git_push": true
+        "no_git_push": false
     }
 }
