@@ -1,0 +1,15 @@
+{
+  "entity": [
+    ["iper-mdrn-loader",       "mdrn-iper-loader"],
+    ["iper-mdrn-loader-split", "mdrn-iper-loader-split"]
+  ],
+  "item": [
+    ["iper-mdrn-loader", "mdrn-iper-loader"]
+  ],
+  "recipe": [
+    ["iper-mdrn-loader", "mdrn-iper-loader"]
+  ],
+  "technology": [
+    ["iper-mdrn-loader", "mdrn-iper-loader"]
+  ]
+}

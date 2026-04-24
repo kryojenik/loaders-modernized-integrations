@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
+Version: 2.0.0
 Date: ????
   Changes:
-    - Update to require loaders-modernized 1.1.0
+    - Update to require loaders-modernized 2.0.0
+      API has been updated and entity naming format changed.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2026-01-23
