@@ -113,13 +113,16 @@ utils.tech_add_ingredients("mdrn-space-loader", {"space-science-pack"})
 for tier, loader in pairs(loaders) do
   if tier ~= "chute-" then
     local name = loader.name or ("mdrn-" .. tier .. "loader")
-    data.raw["loader-1x1"][name].se_allow_in_space = true
-    data.raw["loader-1x1"][name .. "-split"].se_allow_in_space = true
-    ---@diagnostic enable: inject-field
+    for _, sfx in ipairs(C.VARIANT_SUFFIXES) do
+      local e = data.raw["loader-1x1"][name .. sfx]
+      if e then e.se_allow_in_space = true end   ---@diagnostic disable-line: inject-field
+    end
   end
 end
 
 -- You cannot upgrade from a land restricted loader to a space capable loader. Collision masks must match.
 -- The stack loader is set to work on space platforms.  Perhaps there should be a separate land stack loader.
-data.raw["loader-1x1"]["mdrn-express-loader"].next_upgrade = nil
-data.raw["loader-1x1"]["mdrn-express-loader-split"].next_upgrade = nil
+for _, sfx in ipairs(C.VARIANT_SUFFIXES) do
+  local e = data.raw["loader-1x1"]["mdrn-express-loader" .. sfx]
+  if e then e.next_upgrade = nil end
+end
