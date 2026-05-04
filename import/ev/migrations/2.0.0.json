@@ -1,0 +1,15 @@
+{
+  "entity": [
+    ["hyper-mdrn-loader",       "mdrn-hyper-loader"],
+    ["hyper-mdrn-loader-split", "mdrn-hyper-loader-split"]
+  ],
+  "item": [
+    ["hyper-mdrn-loader", "mdrn-hyper-loader"]
+  ],
+  "recipe": [
+    ["hyper-mdrn-loader", "mdrn-hyper-loader"]
+  ],
+  "technology": [
+    ["hyper-mdrn-loader", "mdrn-hyper-loader"]
+  ]
+}
