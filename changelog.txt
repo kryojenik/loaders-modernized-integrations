@@ -5,7 +5,7 @@ Date: ????
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-05-01
-  Bug Fixes:
+  Bugfixes:
     - Fix crash when pycoalprocessing is installed but nothing is installed that would enable stacking (feature flag space travel).
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
