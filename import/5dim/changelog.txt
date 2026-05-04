@@ -1,0 +1,36 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2026-04-28
+  Changes:
+    - Update to require loaders-modernized 2.0.0
+      API has been updated and entity naming format changed.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2026-01-23
+  Changes:
+    - Support changes in 5Dim: New Transport 2.0.20
+    - Updates to dependencies and adjustments to work with Loaders Modernized 1.0.5
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-11-01
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-10-19
+  Bugfixes:
+    - Fix loading error when Space-Age is not loaded
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-08-04
+  Bugfixes:
+    - Fix missing date in changelog
+    - Correct dependency version
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-07-28
+  Changes:
+    - Move 5Dim's support to standalone mod
