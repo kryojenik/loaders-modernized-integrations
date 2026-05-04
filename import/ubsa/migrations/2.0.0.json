@@ -1,0 +1,35 @@
+{
+  "entity": [
+    ["ultra-fast-mdrn-loader",          "mdrn-ultra-fast-loader"],
+    ["ultra-fast-mdrn-loader-split",    "mdrn-ultra-fast-loader-split"],
+    ["extreme-fast-mdrn-loader",        "mdrn-extreme-fast-loader"],
+    ["extreme-fast-mdrn-loader-split",  "mdrn-extreme-fast-loader-split"],
+    ["ultra-express-mdrn-loader",       "mdrn-ultra-express-loader"],
+    ["ultra-express-mdrn-loader-split", "mdrn-ultra-express-loader-split"],
+    ["extreme-express-mdrn-loader",     "mdrn-extreme-express-loader"],
+    ["extreme-express-mdrn-loader-split","mdrn-extreme-express-loader-split"],
+    ["original-ultimate-mdrn-loader",   "mdrn-original-ultimate-loader"],
+    ["original-ultimate-mdrn-loader-split","mdrn-original-ultimate-loader-split"]
+  ],
+  "item": [
+    ["ultra-fast-mdrn-loader",     "mdrn-ultra-fast-loader"],
+    ["extreme-fast-mdrn-loader",   "mdrn-extreme-fast-loader"],
+    ["ultra-express-mdrn-loader",  "mdrn-ultra-express-loader"],
+    ["extreme-express-mdrn-loader","mdrn-extreme-express-loader"],
+    ["original-ultimate-mdrn-loader","mdrn-original-ultimate-loader"]
+  ],
+  "recipe": [
+    ["ultra-fast-mdrn-loader",     "mdrn-ultra-fast-loader"],
+    ["extreme-fast-mdrn-loader",   "mdrn-extreme-fast-loader"],
+    ["ultra-express-mdrn-loader",  "mdrn-ultra-express-loader"],
+    ["extreme-express-mdrn-loader","mdrn-extreme-express-loader"],
+    ["original-ultimate-mdrn-loader","mdrn-original-ultimate-loader"]
+  ],
+  "technology": [
+    ["ultra-fast-mdrn-loader",     "mdrn-ultra-fast-loader"],
+    ["extreme-fast-mdrn-loader",   "mdrn-extreme-fast-loader"],
+    ["ultra-express-mdrn-loader",  "mdrn-ultra-express-loader"],
+    ["extreme-express-mdrn-loader","mdrn-extreme-express-loader"],
+    ["original-ultimate-mdrn-loader","mdrn-original-ultimate-loader"]
+  ]
+}
