@@ -1,7 +1,6 @@
 {
   "entity": [
-    ["mdrn-loader-04",       "mdrn-turbo-loader"],
-    ["mdrn-loader-04-split", "mdrn-turbo-loader-split"]
+    ["mdrn-loader-04",       "mdrn-turbo-loader"]
   ],
   "item": [
     ["mdrn-loader-04", "mdrn-turbo-loader"]
