@@ -1,0 +1,25 @@
+{
+    "name": "loaders-modernized-iper",
+    "version": "2.0.1",
+    "title": "Loaders Modernized: Iper Belt",
+    "description": "Add Modern Loaders to Iper Belts",
+    "author": "kryojenik",
+    "contact": "https://github.com/kryojenik/loaders-modernized-iper",
+    "homepage": "https://github.com/kryojenik/loaders-modernized-iper",
+    "source": "https://github.com/kryojenik/loaders-modernized-iper",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "loaders-modernized >= 2.0.0",
+        "iper-belt"
+    ],
+    "package": {
+        "git_publish_branch": "main",
+        "ignore": [
+            "TODO.md",
+            "types.lua",
+            "screenshots/*"
+        ],
+        "sync_portal_details": false,
+        "no_git_push": true
+    }
+}
