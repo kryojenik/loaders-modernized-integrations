@@ -1,0 +1,33 @@
+{
+    "name": "loaders-modernized-integrations",
+    "version": "2.0.3",
+    "title": "Loaders Modernized: Integrations",
+    "description": "Integrations for Loaders Modernized with popular mods: 5Dim's, Bob's Logistics, Extended Vanilla, Iper Belt, Krastorio 2, Pyanodons, Space Exploration, Ultimate Belts Space Age, and Wooden Logistics.",
+    "author": "kryojenik",
+    "contact": "https://github.com/kryojenik/loaders-modernized-integrations",
+    "homepage": "https://github.com/kryojenik/loaders-modernized-integrations",
+    "source": "https://github.com/kryojenik/loaders-modernized-integrations",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "loaders-modernized >= 2.0.0",
+        "(?) 5dim_transport",
+        "(?) boblogistics",
+        "(?) ev-logistics",
+        "(?) iper-belt",
+        "(?) Krastorio2",
+        "(?) pycoalprocessing",
+        "(?) space-exploration",
+        "(?) UltimateBeltsSpaceAge",
+        "(?) wood-logistics"
+    ],
+    "package": {
+        "git_publish_branch": "main",
+        "ignore": [
+            "TODO.md",
+            "types.lua",
+            "screenshots/*"
+        ],
+        "sync_portal_details": false,
+        "no_git_push": true
+    }
+}
