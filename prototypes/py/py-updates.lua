@@ -1,8 +1,9 @@
-require("prototypes.py")
+if not mods["pycoalprocessing"] then return end
+
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 
-if mods["pycoalprocessing"] and cfg.stacking == C.STACKING.STACK_TIER then
+if cfg.stacking == C.STACKING.STACK_TIER then
   local stack_tech = data.raw["technology"]["mdrn-stack-loader"]
   if not stack_tech then return end
 

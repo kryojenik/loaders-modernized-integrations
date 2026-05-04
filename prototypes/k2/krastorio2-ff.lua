@@ -1,10 +1,9 @@
--- If there is another mod that enables belt stacking and stack loaders in Krastorio 2
--- decide if we need to set up a stack loader.
+if not mods["Krastorio2"] then return end
+
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 if cfg.stacking == C.STACKING.STACK_TIER then
   local loaders = {}
-  -- TODO: This should probably move to the SE mod.
   if not mods["space-exploration"] then
     loaders["superior-"] = { next_upgrade = "mdrn-stack-loader" }
   end

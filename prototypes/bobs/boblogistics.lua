@@ -1,3 +1,5 @@
+if not mods["boblogistics"] then return end
+
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 

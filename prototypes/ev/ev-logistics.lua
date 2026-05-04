@@ -1,7 +1,5 @@
--- Ensure the ev-logistics mod is active
-if not settings.startup["ev-belts-enabled"].value then
-  return false
-end
+if not mods["ev-logistics"] then return end
+if not settings.startup["ev-belts-enabled"].value then return end
 
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")

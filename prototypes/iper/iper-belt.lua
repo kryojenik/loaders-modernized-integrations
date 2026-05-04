@@ -1,3 +1,5 @@
+if not mods["iper-belt"] then return end
+
 -- Iper Belt support
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")

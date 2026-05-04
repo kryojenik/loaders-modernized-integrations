@@ -1,9 +1,8 @@
-local C = require("constants")
-local util = require("__loaders-modernized__.scripts.utils")
+if not mods["space-exploration"] then return end
+if not mods["Krastorio2"] then return end
 
-if not mods["Krastorio2"] then
-  return
-end
+local C = require("prototypes.se.constants")
+local util = require("__loaders-modernized__.scripts.utils")
 
 local startup_settings = settings.startup
 

@@ -1,3 +1,5 @@
+if not mods["UltimateBeltsSpaceAge"] then return end
+
 -- Ultimate Belts Space Age!
 ---@type table<string, LMLoaderTemplate>
 local loaders = {

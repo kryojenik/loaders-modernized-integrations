@@ -1,3 +1,5 @@
+if not mods["Krastorio2"] then return end
+
 -- Define the loader template for the tier 5 turbo belt
 local loaders = {
   ["advanced-"] = {

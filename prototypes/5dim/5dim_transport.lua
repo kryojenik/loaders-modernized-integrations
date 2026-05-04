@@ -1,3 +1,5 @@
+if not mods["5dim_transport"] then return end
+
 -- 5 Dim New Transport
 local C              = require("__loaders-modernized__.constants")
 local cfg            = require("__loaders-modernized__.prototypes.settings-cache")

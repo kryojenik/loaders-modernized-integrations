@@ -1,5 +1,5 @@
--- Ultimate Belts Space Age adjusts logistics-3 tech cost in data-updates.
--- Adjust to unlock at same science tier
+if not mods["UltimateBeltsSpaceAge"] then return end
+
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 

@@ -1,8 +1,10 @@
+if not mods["pycoalprocessing"] then return end
+
 -- Py Specific loaders
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 
-if mods["pycoalprocessing"] and cfg.stacking == C.STACKING.STACK_TIER
+if cfg.stacking == C.STACKING.STACK_TIER
 and data.raw["inserter"]["py-stack-inserter"] then
   MdrnLoaders.add_loaders{
     ["stack-"] = {

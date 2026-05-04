@@ -1,5 +1,7 @@
+if not mods["space-exploration"] then return end
+
 local utils = require("__space-exploration__.data_util")
-local const = require("constants")
+local const = require("prototypes.se.constants")
 local C     = require("__loaders-modernized__.constants")
 local cfg   = require("__loaders-modernized__.prototypes.settings-cache")
 -- Define the loader template for the tier 5 turbo belt
