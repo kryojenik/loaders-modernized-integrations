@@ -1,1 +1,0 @@
-require("prototypes.krastorio2")
