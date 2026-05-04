@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2026-05-01
+  Bugfixes:
+    - Fix crash when pycoalprocessing is installed but nothing is installed that would enable stacking (feature flag space travel).
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2026-04-28
+  Changes:
+    - Update to require loaders-modernized 2.0.0
+      API has been updated and entity naming format changed.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2026-01-23
+  Changes:
+    - Update to work with latest Loaders Modernized
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-08-04
+  Changes:
+    - Move Pyanodon's support to standalone mod
