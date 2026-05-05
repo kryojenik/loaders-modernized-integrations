@@ -6,6 +6,5 @@ Date: ????
       loaders-modernized-ev, loaders-modernized-iper, loaders-modernized-k2,
       loaders-modernized-py, loaders-modernized-se, loaders-modernized-ubsa,
       and loaders-modernized-wood into a single mod.
-  Migrations:
-    - Added migration from mdrn-loader-04 and mdrn-loader-04-split to mdrn-turbo-loader
-      and mdrn-turbo-loader-split for saves predating loaders-modernized-5dim 1.0.4.
+  Bugfixes:
+    - Corrected Bob's Basic loader getting the same restrictions as a chute.  This should be able to unload.

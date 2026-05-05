@@ -153,6 +153,8 @@ if startup_settings["bobmods-logistics-beltoverhaul"].value == true then
   loaders["basic-"] = {
     next_upgrade = "mdrn-loader",
     underground_name = "bob-basic-underground-belt",
+    below_base = false,
+    filter = cfg.chute_mode == C.CHUTE.FILTERED and true or false,
     tint = util.color("808080d1"),
     subgroup = "bob-logistic-tier-0",
     order = "j[loader]-1[mdrn-basic-loader]",
