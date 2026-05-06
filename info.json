@@ -9,14 +9,14 @@
     "source": "https://github.com/kryojenik/loaders-modernized-integrations",
     "factorio_version": "2.0",
     "dependencies": [
-        "loaders-modernized >= 2.0.0",
-        "(?) 5dim_transport",
+        "loaders-modernized >= 2.0.4",
+        "(?) 5dim_transport >= 2.0.20",
         "(?) boblogistics",
         "(?) ev-logistics",
         "(?) iper-belt",
-        "(?) Krastorio2",
+        "(?) Krastorio2 >= 2.0.14",
         "(?) pycoalprocessing",
-        "(?) space-exploration",
+        "(?) space-exploration >= 0.7.41",
         "(?) UltimateBeltsSpaceAge",
         "(?) wood-logistics"
     ],

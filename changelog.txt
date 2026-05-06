@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ????
+Date: 2026-05-05
   Changes:
     - Initial release consolidating loaders-modernized-5dim, loaders-modernized-bobs,
       loaders-modernized-ev, loaders-modernized-iper, loaders-modernized-k2,
