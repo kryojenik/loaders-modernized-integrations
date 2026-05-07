@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
-Date: ????
+Date: 2026-05-07
   Bugfixes:
     - Pyanodon's failed to load.  PyCoalProcessing adds the stack inserter in data-updates.
       Fixed tying to create a stack loader before the stack inserter exists.
