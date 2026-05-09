@@ -15,6 +15,7 @@ do use power.  So keep those power poles handy!
 - 5Dim's New Transport
 - Ultimate Belts Space Age
 - Extended Vanilla: Modular Logistics & Robotics
+- More Belts
 - Iper Belt
 - Wooden Logistics
 

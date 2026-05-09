@@ -18,6 +18,7 @@
         "(?) pycoalprocessing",
         "(?) space-exploration >= 0.7.41",
         "(?) UltimateBeltsSpaceAge",
+        "(?) more-belts",
         "(?) wood-logistics"
     ],
     "package": {
