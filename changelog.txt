@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
-Date: ????
+Date: 2026-05-08
   Bugfixes:
     - Py: Fix where stack-loader unlocks if using a separate tier.  Now depends on fast loaders and unlocks near stack inserters.
     - Bob's: Fix ability to build Turbo Loader in foundry when space-age is enabled.
