@@ -1,4 +1,4 @@
-if mods["Krastorio2"] then
+if mods["Krastorio2"] or mods["Krastorio2-spaced-out"] then
   data:extend({
     {
       type = "bool-setting",
