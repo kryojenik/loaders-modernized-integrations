@@ -2,9 +2,10 @@ if not mods["Krastorio2-spaced-out"] then return end
 
 -- Define the loader template for the tier 5 turbo belt
 local loaders = {
-  
+
   ["superior-"] = {
     underground_name = "kr-superior-underground-belt",
+    upgrade_from_tier = "turbo-",
     order = "06",
     tint = util.color("862f9fd1"),                                  -- Purple tint for superior tier
     prerequisite_techs = { "kr-logistic-5", "mdrn-turbo-loader" }, -- Link to logistic-5 technology
@@ -24,9 +25,8 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
 
   loaders["superior-"].recipe_data.ingredients = {
     { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
-    { type = "item", name = "turbo-transport-belt", amount = 1 },
+    { type = "item", name = "kr-superior-transport-belt", amount = 1 },
     { type = "item", name = "mdrn-turbo-loader", amount = 2 },
-    { type = "fluid", name = "lubricant", amount = 40 },
   }
 
   -- Create new template entries to modify already existing loaders from base.
@@ -62,7 +62,7 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
     recipe_data = {
       ingredients = {
         { type = "item", name = "tungsten-plate", amount = 20 },
-        { type = "item", name = "express-transport-belt", amount = 1 },
+        { type = "item", name = "turbo-transport-belt", amount = 1 },
         { type = "item", name = "mdrn-express-loader", amount = 2 },
         { type = "fluid", name = "lubricant", amount = 40 },
       }
