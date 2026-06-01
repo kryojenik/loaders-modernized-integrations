@@ -27,7 +27,8 @@
         "ignore": [
             "TODO.md",
             "types.lua",
-            "screenshots/*"
+            "screenshots/*",
+            "*.md"
         ],
         "sync_portal_details": true,
         "no_git_push": true

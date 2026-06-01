@@ -9,6 +9,7 @@ do use power.  So keep those power poles handy!
 ## This mod adds integrations to [Loaders Modernized](https://mods.factorio.com/mod/loaders-modernized) for the following mods
 
 - Krastorio 2
+- Krastorio 2 Spaced Out
 - Space Exploration
 - Bob's Logistics
 - Pyanodons
