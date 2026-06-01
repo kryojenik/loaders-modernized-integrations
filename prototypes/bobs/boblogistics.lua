@@ -40,6 +40,7 @@ local stack_inserters = {
   }
 }
 local bob_inserter_overhaul = startup_settings["bobmods-logistics-inserteroverhaul"].value
+local turbo_pfx = (helpers.compare_versions(mods["boblogistics"], "2.1.0") >= 0) and "turbo-" or "bob-turbo-"
 local loaders = {}
 
 loaders[""] = {
@@ -95,19 +96,19 @@ loaders["turbo-"] = {
   upgrade_from_tier = "express-",
   subgroup = "bob-logistic-tier-4",
   order = "j[loader]-1[mdrn-turbo-loader]",
-  underground_name = "bob-turbo-underground-belt",
+  underground_name = turbo_pfx .. "underground-belt",
   tint = util.color("9926d3e1"),
   prerequisite_techs = { "logistics-4", "mdrn-express-loader" },
   recipe_data = {
-    category = data.raw["recipe"]["bob-turbo-underground-belt"].category,
-    surface_conditions = data.raw["recipe"]["bob-turbo-underground-belt"].surface_conditions,
+    category = data.raw["recipe"][turbo_pfx .. "underground-belt"].category,
+    surface_conditions = data.raw["recipe"][turbo_pfx .. "underground-belt"].surface_conditions,
     ingredients = {
-      {type = "item", name = "bob-turbo-underground-belt", amount = 1},
+      {type = "item", name = turbo_pfx .. "underground-belt", amount = 1},
       {type = "item", name = inserters[bob_inserter_overhaul]["turbo"], amount = 6},
       {type = "item", name = "mdrn-express-loader", amount = 1}
     },
     stack_ingredients = {
-      {type = "item", name = "bob-turbo-underground-belt", amount = 1},
+      {type = "item", name = turbo_pfx .. "underground-belt", amount = 1},
       {type = "item", name = stack_inserters[bob_inserter_overhaul]["turbo"], amount = 6},
       {type = "item", name = "mdrn-express-loader", amount = 1}
     }
