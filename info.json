@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-integrations",
     "factorio_version": "2.1",
     "dependencies": [
-        "loaders-modernized >= 2.0.4",
+        "loaders-modernized >= 2.1.0",
         "(?) 5dim_transport >= 2.0.20",
         "(?) boblogistics",
         "(?) ev-logistics",
