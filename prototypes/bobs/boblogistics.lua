@@ -100,7 +100,7 @@ loaders["turbo-"] = {
   tint = util.color("9926d3e1"),
   prerequisite_techs = { "logistics-4", "mdrn-express-loader" },
   recipe_data = {
-    category = data.raw["recipe"][turbo_pfx .. "underground-belt"].category,
+    categories = data.raw["recipe"][turbo_pfx .. "underground-belt"].categories,
     surface_conditions = data.raw["recipe"][turbo_pfx .. "underground-belt"].surface_conditions,
     ingredients = {
       {type = "item", name = turbo_pfx .. "underground-belt", amount = 1},

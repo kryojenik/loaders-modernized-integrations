@@ -202,7 +202,7 @@ if startup_settings["mdrn-keep-5d-loaders"].value ~= "all" then
     local name_5d = "5d-loader-1x1-" .. tier
     data.raw["loader-1x1"][name_5d].hidden_in_factoriopedia = true
     data.raw["loader-1x1"][name_5d].minable.result = loader.name
-    data.raw["loader-1x1"][name_5d].next_upgrade = nil 
+    data.raw["loader-1x1"][name_5d].next_upgrade = nil
     data.raw["item"][name_5d].hidden = true
     data.raw["recipe"][name_5d].hidden = true
     local tech = data.raw["technology"][loader.unlocked_by]
@@ -256,7 +256,7 @@ if cfg.stacking == C.STACKING.STACK_TIER then
 
   local stack_recipe = data.raw["recipe"]["mdrn-stack-loader"]
   if stack_recipe then
-    stack_recipe.category = "crafting-with-fluid-or-metallurgy"
+    stack_recipe.categories = {"crafting-with-fluid", "metallurgy"}
   end
 
   for _, sfx in ipairs(C.VARIANT_SUFFIXES) do
