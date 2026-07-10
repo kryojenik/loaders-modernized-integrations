@@ -47,6 +47,7 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
 
   -- Create new template entries to modify already existing loaders from base.
   loaders[""] = {
+    prerequisite_techs = { "logistics" },
     recipe_data = {
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },

@@ -9,10 +9,17 @@ local startup_settings = settings.startup
 local move_to_aai = (mods["aai-loaders"] and startup_settings["aai-loaders-mode"].value ~= "graphics-only")
 local pull_k2_to_mdrn = not move_to_aai and startup_settings["kr-loaders"].value
 
+---@type data.TechnologyID[]?
+local base_prerequisite_techs
+if not move_to_aai then
+  base_prerequisite_techs = { "logistics" }
+end
+
 ---@type table<string, LMLoaderTemplate>
 local loaders = {
   [""] = {
     unlocked_by = move_to_aai and "aai-loader" or nil,
+    prerequisite_techs = base_prerequisite_techs,
     recipe_data = {
       ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },

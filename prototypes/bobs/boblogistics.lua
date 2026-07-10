@@ -46,6 +46,7 @@ local loaders = {}
 loaders[""] = {
   subgroup = "bob-logistic-tier-1",
   order = "j[loader]-1[mdrn-loader]",
+  prerequisite_techs = { "logistics" },
   recipe_data = {
     ingredients = {
       {type = "item", name = "underground-belt", amount = 1},
