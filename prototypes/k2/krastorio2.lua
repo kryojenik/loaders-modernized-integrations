@@ -76,4 +76,10 @@ if settings.startup["mdrn-use-k2-recipes"].value == true then
   }
 end
 
+-- Do not create the advanced loader if K2 Spaced Out is loaded
+-- It uses the turbo tier only.
+if mods["Krastorio2-spaced-out"] then
+  loaders["advanced-"] = nil
+end
+
 MdrnLoaders.add_loaders(loaders)

@@ -4,11 +4,8 @@ if not mods["Krastorio2-spaced-out"] then return end
 local loaders = {
 
   ["superior-"] = {
-    underground_name = "kr-superior-underground-belt",
     upgrade_from_tier = "turbo-",
-    order = "06",
-    tint = util.color("862f9fd1"),                                  -- Purple tint for superior tier
-    prerequisite_techs = { "kr-logistic-5", "mdrn-turbo-loader" }, -- Link to logistic-5 technology
+    prerequisite_techs = { "kr-logistic-5", "mdrn-turbo-loader" },
     recipe_data = {
       ingredients = {
         { type = "item", name = "turbo-underground-belt", amount = 1 },
@@ -21,34 +18,8 @@ local loaders = {
 }
 
 if settings.startup["mdrn-use-k2-recipes"].value == true then
-  -- Adjust the new K2 loaders we're adding
-
-  loaders["superior-"].recipe_data.ingredients = {
-    { type = "item", name = "kr-imersium-gear-wheel", amount = 10 },
-    { type = "item", name = "kr-superior-transport-belt", amount = 1 },
-    { type = "item", name = "mdrn-turbo-loader", amount = 2 },
-  }
-
   -- Create new template entries to modify already existing loaders from base.
-  loaders[""] = {
-    prerequisite_techs = { "logistics" },
-    recipe_data = {
-      ingredients = {
-        { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "kr-iron-beam", amount = 2 },
-        { type = "item", name = "transport-belt", amount = 1 }
-      }
-    }
-  }
-  loaders["fast-"] = {
-    recipe_data = {
-      ingredients = {
-        { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "fast-transport-belt", amount = 1 },
-        { type = "item", name = "mdrn-loader", amount = 2 },
-      }
-    }
-  }
+  -- K2SO takes advantage of lubricant
   loaders["express-"] = {
     recipe_data = {
       ingredients = {

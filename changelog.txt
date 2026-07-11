@@ -3,6 +3,7 @@ Version: 2.1.2
 Date: ????
   Bugfixes:
     - Move the base tier loader tech behind steel processing if the recipe requires steel.
+    - Improved K2 Spaced Out compatibility in Factorio 2.1
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 2026-06-23

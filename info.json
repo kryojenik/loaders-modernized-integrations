@@ -9,7 +9,7 @@
     "source": "https://github.com/kryojenik/loaders-modernized-integrations",
     "factorio_version": "2.1",
     "dependencies": [
-        "loaders-modernized >= 2.1.1",
+        "loaders-modernized >= 2.1.2",
         "(?) 5dim_transport >= 2.0.20",
         "(?) boblogistics",
         "(?) ev-logistics",
@@ -20,7 +20,7 @@
         "(?) UltimateBeltsSpaceAge",
         "(?) more-belts",
         "(?) wood-logistics",
-        "(?) Krastorio2-spaced-out"
+        "(?) Krastorio2-spaced-out >= 2.0.13"
     ],
     "package": {
         "git_publish_branch": "Factorio-2.1",
