@@ -32,3 +32,10 @@ if mods["pycoalprocessing"] then
   stacking.allowed_values = { "none", "all", "stack-tier" }
   stacking.default_value = "none"
 end
+
+if mods["factorioplus"] then
+  local stacking = data.raw["string-setting"]["mdrn-enable-stacking"]
+  if not stacking.hidden then
+    stacking.default_value = "all"
+  end
+end
