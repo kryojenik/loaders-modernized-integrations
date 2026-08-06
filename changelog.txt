@@ -3,6 +3,8 @@ Version: 2.0.10
 Date: ????
   Features:
     - Added support for Factorio+
+  Bugfixes:
+    - Bob's: No longer require previous tier loader when Bob's setting for Belt requires previous tier is disabled.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2026-07-11
