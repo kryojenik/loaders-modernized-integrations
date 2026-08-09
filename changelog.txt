@@ -4,6 +4,7 @@ Date: ????
   Features:
     - Initial support for Factorio+
     - Initial support for TurboBelt (SEI: TurboBelt, SEI: Stack Inserter)
+    - Initial support for One More Tier
   Bugfixes:
     - Bob's: No longer require previous tier loader when Bob's setting for Belt requires previous tier is disabled.
 ---------------------------------------------------------------------------------------------------

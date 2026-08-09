@@ -19,6 +19,9 @@ do use power.  So keep those power poles handy!
 - More Belts
 - Iper Belt
 - Wooden Logistics
+- Factorio+
+- One More Tier
+- Turbo Belt
 
 ## Translations
 
