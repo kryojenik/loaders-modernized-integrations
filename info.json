@@ -15,6 +15,8 @@
         "(?) ev-logistics",
         "(?) iper-belt",
         "(?) Krastorio2 >= 2.0.14",
+        "(?) periodic-madness >= 0.9",
+        "(?) periodic-madness-test >= 0.9",
         "(?) pycoalprocessing",
         "(?) space-exploration >= 0.7.41",
         "(?) UltimateBeltsSpaceAge",
