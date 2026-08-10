@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.3
 Date: ????
-  Changes:
-    - Add compatibility for Periodic Madness 0.9 (Thanks for the PR NeveHanter)
+  Features:
+    - Initial compatibility for Periodic Madness 0.9 (Thanks for the PR NeveHanter)
+    - Initial compatibility for Factorio+
+    - Initial compatibility for TurboBelt (SEI: TurboBelt, SEI: Stack Inserter)
+    - Initial compatibility for One More Tier
+  Bugfixes:
+    - Bob's: No longer require previous tier loader when Bob's setting for Belt requires previous tier is disabled.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
 Date: 2026-07-11

@@ -191,4 +191,20 @@ if cfg.stacking == C.STACKING.STACK_TIER then
   }
 end
 
+if settings.startup["bobmods-logistics-beltrequireprevious"].value == false then
+  for _, loader in pairs(loaders) do
+    if loader.recipe_data then
+      for _, kind in ipairs({"ingredients", "stack_ingredients"}) do
+        if loader.recipe_data[kind] then
+          for i, ingredient in ipairs(loader.recipe_data[kind]) do
+            if string.find(ingredient.name, "loader") then
+              table.remove(loader.recipe_data[kind], i)
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
 MdrnLoaders.add_loaders(loaders)

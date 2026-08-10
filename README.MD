@@ -15,10 +15,14 @@ do use power.  So keep those power poles handy!
 - Pyanodons
 - 5Dim's New Transport
 - Ultimate Belts Space Age
+- Factorio+
+- Periodic Madness
 - Extended Vanilla: Modular Logistics & Robotics
 - More Belts
 - Iper Belt
 - Wooden Logistics
+- One More Tier
+- Turbo Belt
 
 ## Translations
 
