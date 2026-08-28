@@ -103,6 +103,7 @@ local loaders = {
 if settings.startup["settings-loaders-cost"].value == "expensive" then
   for _, loader in pairs(loaders) do
     for _, ingredient in pairs(loader.recipe_data.ingredients) do
+      ---@diagnostic disable-next-line: param-type-mismatch
       if not string.find(ingredient.name, "loader") then
         ingredient.amount = ingredient.amount * 2
       end
