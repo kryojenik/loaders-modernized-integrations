@@ -1,4 +1,4 @@
-if not mods["UltimateBeltsSpaceAge"] then return end
+if not (mods["UltimateBeltsSpaceAge"] or mods["UltimateBeltsSpaceAge_fix21"]) then return end
 
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")

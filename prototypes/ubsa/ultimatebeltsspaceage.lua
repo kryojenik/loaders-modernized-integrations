@@ -1,4 +1,4 @@
-if not mods["UltimateBeltsSpaceAge"] then return end
+if not (mods["UltimateBeltsSpaceAge"] or mods["UltimateBeltsSpaceAge_fix21"]) then return end
 
 -- Ultimate Belts Space Age!
 ---@type table<string, LMLoaderTemplate>
