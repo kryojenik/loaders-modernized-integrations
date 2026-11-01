@@ -29,7 +29,7 @@
         "(?) one-more-tier"
     ],
     "package": {
-        "git_publish_branch": "Factorio-2.1",
+        "git_publish_branch": "main",
         "ignore": [
             "TODO.md",
             "types.lua",
