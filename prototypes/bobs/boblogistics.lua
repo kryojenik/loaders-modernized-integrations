@@ -3,7 +3,6 @@ if not mods["boblogistics"] then return end
 local C   = require("__loaders-modernized__.constants")
 local cfg = require("__loaders-modernized__.prototypes.settings-cache")
 
----@type table<string, LMLoaderTemplate>
 local startup_settings = settings.startup
 
 local inserters = {
@@ -41,6 +40,8 @@ local stack_inserters = {
 }
 local bob_inserter_overhaul = startup_settings["bobmods-logistics-inserteroverhaul"].value
 local turbo_pfx = (helpers.compare_versions(mods["boblogistics"], "2.1.0") >= 0) and "turbo-" or "bob-turbo-"
+
+---@type table<string, LMLoaderTemplate>
 local loaders = {}
 
 loaders[""] = {
